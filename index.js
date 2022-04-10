@@ -40,7 +40,7 @@ server.put('/movies/:index', (req, res) => {
 server.delete('/movies/:index', (req, res) => {
     const { index } = req.params;
 
-    movies.slice(index, 1);
+    movies.splice(index, 1);
     return res.json({message:"O filme foi deletado"});
 })
 
